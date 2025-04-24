@@ -72,4 +72,5 @@ csp_can_node2_rdp.c   → receives messages and replies with ACKs
 ## 📘 References
 
 - [CSP on GitHub](https://github.com/libcsp/libcsp)
+- [Setup RDP on libcsp] (https://github.com/libcsp/libcsp/issues/596)
 - [Linux SocketCAN](https://www.kernel.org/doc/html/latest/networking/can.html)
