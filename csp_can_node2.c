@@ -11,6 +11,7 @@
 #define SERVER_ADDRESS 2
 #define CLIENT_ADDRESS 1
 #define SERVER_PORT    10
+#define VCAN_DEVICE    "vcan0"
 
 unsigned int server_received = 0;
 static unsigned int run_duration_in_sec = 3;
@@ -63,7 +64,7 @@ int main(void) {
 	router_start();
 
 	csp_iface_t * iface;
-	if (csp_can_socketcan_open_and_add_interface("vcan0", CSP_IF_CAN_DEFAULT_NAME, SERVER_ADDRESS, 1000000, true, &iface) != CSP_ERR_NONE) {
+	if (csp_can_socketcan_open_and_add_interface(VCAN_DEVICE, CSP_IF_CAN_DEFAULT_NAME, SERVER_ADDRESS, 1000000, true, &iface) != CSP_ERR_NONE) {
 		csp_print("Failed to add CAN interface\n");
 		return -1;
 	}
