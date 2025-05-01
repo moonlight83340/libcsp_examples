@@ -29,3 +29,23 @@ libcsp_examples/
   - [`socat`](https://linux.die.net/man/1/socat) (for USART/KISS)
   - Virtual CAN support (`modprobe vcan`)
   - Python 3 (for some test clients/servers if provided)
+
+### Steps to Build
+
+1. Clone this repository:
+```
+git clone https://github.com/moonlight83340/libcsp_examples.git
+cd libcsp_examples
+```
+
+2. Initialize submodules:
+```
+git submodule update --init --recursive
+```
+
+3. Build the project using CMake:
+```
+mkdir build && cd build
+cmake ..
+make
+```
