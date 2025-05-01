@@ -1,0 +1,36 @@
+name: Build and Test libcsp_examples
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out the code
+      uses: actions/checkout@v4
+      with:
+        submodules: true
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install libzmq3-dev libsocketcan-dev socat iproute2
+        sudo apt-get install linux-modules-extra-$(uname -r)
+        sudo apt-get install ninja-build cmake
+
+    - name: Initialize git submodules
+      run: |
+        git submodule init
+        git submodule update
+
+    - name: Create build directory
+      run: |
+        mkdir build
+        cd build
+        cmake ..  # Configuration du projet avec CMake
+
+    - name: Build the project
+      run: |
+        cd build
+        make
