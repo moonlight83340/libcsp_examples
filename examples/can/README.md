@@ -1,4 +1,4 @@
-# CSP Example: Client/Server Communication over vcan0
+# CSP Example : Client / Server Communication over vcan0
 
 This example demonstrates a simple client/server interaction using **CSP (CubeSat Space Protocol)** over a virtual CAN interface (`vcan0`), implemented with **libcsp**.
 
@@ -55,4 +55,3 @@ sudo ip link set up vcan0
 - Accepts incoming connections from clients
 - Reads incoming packets
 - Sends back a reply in the format: `"ACK <count>"`, where `<count>` is the number of received messages so far
-

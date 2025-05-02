@@ -71,7 +71,7 @@ int main(void) {
 		.stopbits = 1,
 		.paritysetting = 0,
 	};
-	if(csp_usart_open_and_add_kiss_interface(&conf, CSP_IF_KISS_DEFAULT_NAME, SERVER_ADDRESS, &iface) != CSP_ERR_NONE) {
+	if (csp_usart_open_and_add_kiss_interface(&conf, CSP_IF_KISS_DEFAULT_NAME, SERVER_ADDRESS, &iface) != CSP_ERR_NONE) {
 		csp_print("Failed to add KISS interface\n");
 		return -1;
 	}
