@@ -1,2 +1,3 @@
 # Add can examples directories
 add_subdirectory(client_server_with_server_response)
+add_subdirectory(client_server_without_server_response)
