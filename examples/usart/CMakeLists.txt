@@ -1,11 +1,2 @@
-# USART node 1
-add_executable(csp_usart_node1
-    csp_usart_node1.c
-)
-target_link_libraries(csp_usart_node1 csp utils Threads::Threads)
-
-# USART node 2
-add_executable(csp_usart_node2
-    csp_usart_node2.c
-)
-target_link_libraries(csp_usart_node2 csp utils Threads::Threads)
+# Add can examples directories
+add_subdirectory(client_server_with_server_response)
